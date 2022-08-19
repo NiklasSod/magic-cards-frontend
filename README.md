@@ -1,3 +1,10 @@
+Project to further better css skills with MERN-stack and typeScript on server.
+
+Magic cards shop created with React.
+Working with tailwind <-> styled-components.
+
+<!-- -------------------- -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
