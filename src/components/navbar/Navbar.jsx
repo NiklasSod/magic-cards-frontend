@@ -23,10 +23,18 @@ function Navbar() {
       <NavbarInnerContainer>
         <LeftContainer>
           <NavbarLinkContainer>
-            <NavbarLink to="/">Home</NavbarLink>
-            <NavbarLink to="/products">Products</NavbarLink>
-            <NavbarLink to="/about">About</NavbarLink>
-            <NavbarLink to="/contact">Contact</NavbarLink>
+            <NavbarLink onClick={() => setHamburgerMenu(false)} to="/">
+              Home
+            </NavbarLink>
+            <NavbarLink onClick={() => setHamburgerMenu(false)} to="/products">
+              Products
+            </NavbarLink>
+            <NavbarLink onClick={() => setHamburgerMenu(false)} to="/about">
+              About
+            </NavbarLink>
+            <NavbarLink onClick={() => setHamburgerMenu(false)} to="/contact">
+              Contact
+            </NavbarLink>
             <HamburgerButton
               onClick={() => {
                 setHamburgerMenu((curr) => !curr);
