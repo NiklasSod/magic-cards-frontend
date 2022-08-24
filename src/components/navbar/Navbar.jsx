@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 import {
   NavbarContainer,
@@ -11,9 +11,9 @@ import {
   LogoImg,
   HamburgerButton,
   NavbarLinkExtended,
-} from './navbar.style';
+} from "./navbar.style";
 
-import Logo from '../../assets/logo.png';
+import Logo from "../../assets/logo.png";
 
 function Navbar() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -32,7 +32,7 @@ function Navbar() {
                 setHamburgerMenu((curr) => !curr);
               }}
             >
-              {hamburgerMenu ? <>&#10005;</> : <>&#8801;</> }
+              {hamburgerMenu ? <>&#10005;</> : <>&#8801;</>}
             </HamburgerButton>
           </NavbarLinkContainer>
         </LeftContainer>
@@ -40,12 +40,29 @@ function Navbar() {
           <LogoImg src={Logo} alt="logo" />
         </RightContainer>
       </NavbarInnerContainer>
-      { hamburgerMenu && (
+      {hamburgerMenu && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtended onClick={() => setHamburgerMenu(false)} to="/">Home</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setHamburgerMenu(false)} to="/products">Products</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setHamburgerMenu(false)} to="/about">About</NavbarLinkExtended>
-          <NavbarLinkExtended onClick={() => setHamburgerMenu(false)} to="/contact">Contact</NavbarLinkExtended>
+          <NavbarLinkExtended onClick={() => setHamburgerMenu(false)} to="/">
+            Home
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setHamburgerMenu(false)}
+            to="/products"
+          >
+            Products
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setHamburgerMenu(false)}
+            to="/about"
+          >
+            About
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setHamburgerMenu(false)}
+            to="/contact"
+          >
+            Contact
+          </NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
