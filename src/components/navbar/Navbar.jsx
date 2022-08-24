@@ -15,7 +15,7 @@ import {
 
 import Logo from '../../assets/logo.png';
 
-function Navbar2() {
+function Navbar() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   return (
@@ -52,4 +52,4 @@ function Navbar2() {
   );
 }
 
-export default Navbar2;
+export default Navbar;
