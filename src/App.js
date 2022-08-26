@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Navbar from "./components/navbar/Navbar";
+import LoginForm from "./components/loginForm/LoginForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginForm />} />
       </Routes>
     </>
   );

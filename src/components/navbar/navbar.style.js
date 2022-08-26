@@ -51,10 +51,11 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled(Link)`
   color: white;
-  font-size: x-large;
+  font-size: large;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   margin: 1em;
+  align-self: center;
 
   @media (max-width: 45em) {
     display: none;
@@ -81,7 +82,7 @@ export const HamburgerButton = styled.button`
   background: none;
   border: none;
   color: white;
-  font-size: 4em;
+  font-size: 3em;
   cursor: pointer;
 
   @media (min-width: 45em) {

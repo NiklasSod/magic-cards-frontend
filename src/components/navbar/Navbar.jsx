@@ -46,6 +46,9 @@ function Navbar() {
         </LeftContainer>
         <RightContainer>
           <LogoImg src={Logo} alt="logo" />
+          <NavbarLink onClick={() => setHamburgerMenu(false)} to="/login">
+            Login
+          </NavbarLink>
         </RightContainer>
       </NavbarInnerContainer>
       {hamburgerMenu && (
@@ -70,6 +73,12 @@ function Navbar() {
             to="/contact"
           >
             Contact
+          </NavbarLinkExtended>
+          <NavbarLinkExtended
+            onClick={() => setHamburgerMenu(false)}
+            to="/login"
+          >
+            Login
           </NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
