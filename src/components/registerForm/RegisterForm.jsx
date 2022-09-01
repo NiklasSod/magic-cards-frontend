@@ -1,5 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint no-unused-vars: "off" */
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import {
   LoginContainer,
@@ -9,6 +12,12 @@ import {
 } from "./register.style";
 
 export default function RegisterForm() {
+  const [registerData, setRegisterData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
   return (
     // <div className="relative flex flex-col justify-center mt-12 overflow-hidden m-8">
     <LoginContainer>
