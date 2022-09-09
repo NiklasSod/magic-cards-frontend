@@ -79,3 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### git config --global core.autocrlf false
 
 To change CRLF to LF
+git config --global core.autocrlf false
