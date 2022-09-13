@@ -7,9 +7,9 @@ import axios from "axios";
 import InfoModal from "../infoModal/InfoModal";
 
 import {
-  LoginContainer,
-  LoginInnerContainer,
-  LoginLabel,
+  RegisterContainer,
+  RegisterInnerContainer,
+  RegisterLabel,
   Input,
 } from "./register.style";
 
@@ -51,14 +51,14 @@ export default function RegisterForm() {
 
   return (
     <div>
-      <LoginContainer>
-        <LoginInnerContainer>
+      <RegisterContainer>
+        <RegisterInnerContainer>
           <h1 className="text-3xl font-semibold text-center text-purple-700 underline uppercase decoration-wavy">
             Register
           </h1>
           <form className="mt-6">
             <div className="mb-2">
-              <LoginLabel htmlFor="firstName">First Name</LoginLabel>
+              <RegisterLabel htmlFor="firstName">First Name</RegisterLabel>
               <Input
                 min="1"
                 max="60"
@@ -68,7 +68,7 @@ export default function RegisterForm() {
               />
             </div>
             <div className="mb-2">
-              <LoginLabel htmlFor="lastName">Last Name</LoginLabel>
+              <RegisterLabel htmlFor="lastName">Last Name</RegisterLabel>
               <Input
                 min="1"
                 max="60"
@@ -78,7 +78,7 @@ export default function RegisterForm() {
               />
             </div>
             <div className="mb-2">
-              <LoginLabel htmlFor="email">Email</LoginLabel>
+              <RegisterLabel htmlFor="email">Email</RegisterLabel>
               <Input
                 min="3"
                 max="60"
@@ -124,8 +124,8 @@ export default function RegisterForm() {
               Login
             </Link>
           </p>
-        </LoginInnerContainer>
-      </LoginContainer>
+        </RegisterInnerContainer>
+      </RegisterContainer>
       {showModal && <InfoModal status={status} message={message} />}
     </div>
   );

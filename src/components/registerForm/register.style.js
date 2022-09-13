@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import tw from "tailwind-styled-components";
 
-export const LoginContainer = styled.div`
+export const RegisterContainer = styled.div`
   flex: none;
   position: relative;
   flex-direction: column;
@@ -11,7 +11,7 @@ export const LoginContainer = styled.div`
   margin: 8px;
 `;
 
-export const LoginInnerContainer = styled.div`
+export const RegisterInnerContainer = styled.div`
   width: full;
   padding: 6px;
   margin: auto;
@@ -29,7 +29,7 @@ export const LoginInnerContainer = styled.div`
   max-width: 36rem;
 `;
 
-export const LoginLabel = styled.div`
+export const RegisterLabel = styled.div`
   display: block;
   font-size: 0.875rem;
   line-height: 1.25rem;
