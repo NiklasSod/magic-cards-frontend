@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint no-unused-vars: "off" */
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import {
@@ -15,6 +15,7 @@ import {
 const ipAddress = process.env.REACT_APP_IP_ADDRESS ?? "127.0.0.1";
 
 export default function RegisterForm() {
+  const navigate = useNavigate();
   const [registerData, setRegisterData] = useState({
     firstName: "",
     lastName: "",
@@ -29,8 +30,15 @@ export default function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(registerData);
-    axios.post(`http://${ipAddress}:4444/register`, registerData);
+    axios
+      .post(`http://${ipAddress}:4444/register`, registerData)
+      .then((res) => {
+        navigate("/login");
+      })
+      .catch((err) => {
+        // json stringify and popup
+        console.log(err.response.data.message);
+      });
   };
 
   return (
