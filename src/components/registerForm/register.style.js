@@ -6,9 +6,8 @@ export const RegisterContainer = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
-  margin-top: 12px;
-  overflow: hidden;
   margin: 8px;
+  margin-top: 30px;
 `;
 
 export const RegisterInnerContainer = styled.div`

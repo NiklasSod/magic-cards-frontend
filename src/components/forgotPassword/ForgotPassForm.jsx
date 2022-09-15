@@ -5,18 +5,7 @@ export default function ForgotPassForm() {
     <form action="#" className="form">
       <div className="form-row">
         <label htmlFor="email">
-          First name:
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="Enter name here..."
-          />
-        </label>
-      </div>
-      <div className="form-row">
-        <label htmlFor="email">
-          Password:
+          Email:
           <input
             type="email"
             id="email"

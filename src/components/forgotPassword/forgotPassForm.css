@@ -8,10 +8,9 @@
 
 .form {
   margin-top: 3em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+  width: 36em;
+  margin: auto;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -24,13 +23,17 @@
 }
 
 .form-row input {
-  float: right;
-  margin-left: 1em;
+  width: 20em;
+  margin-left: 2em;
 }
 
 .btn {
   width: 4em;
   padding: 0.1em;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -39,4 +42,16 @@
   color: white;
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 45em) {
+  .form {
+    width: auto;
+    margin: 0 5em 0 5em;
+  }
+
+  .form-row input {
+    width: auto;
+    margin-left: 2em;
+  }
 }

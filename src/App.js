@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/navbar/Navbar";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer />
     </>
   );
 }
