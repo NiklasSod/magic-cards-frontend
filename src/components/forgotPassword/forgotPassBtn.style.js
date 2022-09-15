@@ -13,6 +13,9 @@ export const ButtonReset = styled.div`
   border-radius: 1em;
   background-color: #1d97f6;
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const Text = styled.p`

@@ -33,6 +33,10 @@
   padding: 0.1em;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-primary {
   background-color: var(--primary);
   margin-top: 0.2em;
