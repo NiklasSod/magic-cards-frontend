@@ -56,10 +56,15 @@ export default function RegisterForm() {
           <h1 className="text-3xl font-semibold text-center text-purple-700 underline uppercase decoration-wavy">
             Register
           </h1>
-          <form className="mt-6">
+          <form
+            className="mt-6"
+            autoComplete="off"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <div className="mb-2">
               <RegisterLabel htmlFor="firstName">First Name</RegisterLabel>
               <Input
+                autoComplete="off"
                 min="1"
                 max="60"
                 onChange={(e) => handleInputs(e)}
@@ -70,6 +75,7 @@ export default function RegisterForm() {
             <div className="mb-2">
               <RegisterLabel htmlFor="lastName">Last Name</RegisterLabel>
               <Input
+                autoComplete="off"
                 min="1"
                 max="60"
                 onChange={(e) => handleInputs(e)}
@@ -80,6 +86,7 @@ export default function RegisterForm() {
             <div className="mb-2">
               <RegisterLabel htmlFor="email">Email</RegisterLabel>
               <Input
+                autoComplete="off"
                 min="3"
                 max="60"
                 onChange={(e) => handleInputs(e)}
@@ -95,6 +102,7 @@ export default function RegisterForm() {
                 Password
               </label>
               <Input
+                autoComplete="off"
                 min="5"
                 max="60"
                 onChange={(e) => handleInputs(e)}
@@ -104,8 +112,7 @@ export default function RegisterForm() {
             </div>
             <div className="mt-6">
               <button
-                onClick={(e) => handleSubmit(e)}
-                type="button"
+                type="submit"
                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
               >
                 Register

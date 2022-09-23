@@ -2,11 +2,12 @@ import "./forgotPassForm.css";
 
 export default function ForgotPassForm() {
   return (
-    <form action="#" className="form">
+    <form action="#" className="form" autoComplete="off">
       <div className="form-row">
         <label htmlFor="email">
           Email:
           <input
+            autoComplete="off"
             type="email"
             id="email"
             name="email"
