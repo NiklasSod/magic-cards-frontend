@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   NavbarContainer,
@@ -17,6 +17,13 @@ import Logo from "../../assets/logo.png";
 
 function Navbar() {
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
+  const [userLoginIn, setUserLoginIn] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("token") !== null) {
+      setUserLoginIn(true);
+    }
+  }, []);
 
   return (
     <NavbarContainer extendNavbar={hamburgerMenu}>
@@ -47,7 +54,7 @@ function Navbar() {
         <RightContainer>
           <LogoImg src={Logo} alt="logo" />
           <NavbarLink onClick={() => setHamburgerMenu(false)} to="/login">
-            Login
+            {userLoginIn ? "Logout" : "Login"}
           </NavbarLink>
         </RightContainer>
       </NavbarInnerContainer>
@@ -78,7 +85,7 @@ function Navbar() {
             onClick={() => setHamburgerMenu(false)}
             to="/login"
           >
-            Login
+            {userLoginIn ? "Logout" : "Login"}
           </NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
