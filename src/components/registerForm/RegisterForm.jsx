@@ -3,7 +3,7 @@
 /* eslint no-unused-vars: "off" */
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import axios from "../../helpers/axios";
 import InfoModal from "../infoModal/InfoModal";
 
 import {

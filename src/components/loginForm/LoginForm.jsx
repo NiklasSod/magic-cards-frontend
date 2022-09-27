@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../../helpers/axios";
 import ForgotPassBtn from "../forgotPassword/ForgotPassBtn";
 import ForgotPassForm from "../forgotPassword/ForgotPassForm";
 
@@ -44,11 +44,12 @@ export default function LoginForm() {
         setMessage(`Welcome ${res.data.message.user.firstName}!`);
         if (res.data.message.adminToken) {
           localStorage.setItem(
-            "adminUser",
+            "adminToken",
             JSON.stringify(res.data.message.adminToken)
           );
-        } else {
-          localStorage.setItem("user", JSON.stringify(res.data.message.token));
+        }
+        if (res.data.message.token) {
+          localStorage.setItem("token", JSON.stringify(res.data.message.token));
         }
         setShowModal(true);
         setTimeout(() => navigate("/"), 1000);
