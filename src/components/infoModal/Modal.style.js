@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Modal = styled.p`
-  width: 20em;
+  text-align: center;
+  width: max-content;
   margin: auto;
   margin-top: 2rem;
   padding: 0.8rem;
