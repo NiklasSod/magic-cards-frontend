@@ -42,6 +42,14 @@ export default function LoginForm() {
       .then((res) => {
         setStatus(res.status);
         setMessage(`Welcome ${res.data.message.user.firstName}!`);
+        if (res.data.message.adminToken) {
+          localStorage.setItem(
+            "adminUser",
+            JSON.stringify(res.data.message.adminToken)
+          );
+        } else {
+          localStorage.setItem("user", JSON.stringify(res.data.message.token));
+        }
         setShowModal(true);
         setTimeout(() => navigate("/"), 1000);
       })
