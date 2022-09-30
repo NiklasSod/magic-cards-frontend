@@ -1,6 +1,11 @@
+import axios from "../helpers/axios";
+
+const ipAddress = process.env.REACT_APP_IP_ADDRESS ?? "127.0.0.1";
+
 function Contact() {
   const submitForm = (e) => {
     e.preventDefault();
+    axios.post(`http://${ipAddress}:4444/sendMail`);
   };
 
   return (
